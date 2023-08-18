@@ -199,3 +199,9 @@ th, td {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
+@media (max-width: 580px) {
+    form div label {
+        text-align:center;
+    }
+}
