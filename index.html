@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Cadastrar funcionarios</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="logo">
+            <h1>Nome do painel</h1>
+        </div>
+        <div>
+            <ul>
+                <li><a href="cadastro_funcionarios.html">Cadastro de Funcionários</a></li>
+                <li><a href="cadastro_produtos.html">Cadastro de Produtos</a></li>
+                <li><a href="gerenciamento_produtos.html">Gerenciamento de Produtos</a></li>
+                <li><a href="gerenciamento_clientes.html">Gerenciamento de Clientes</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Cadastro de Funcionários</h2>
+            <hr style="border: 1px groove rgba(0, 0, 0, 0.322); opacity: 0.5;">
+            <form>
+                <div class="inputsFuncionarios">
+                    <div class="input-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome completo" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="cargo">Cargo:</label>
+                        <input type="text" id="cargo" name="cargo" placeholder="Cargo" >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="setor">Setor:</label>
+                        <input type="text" id="setor" name="setor" placeholder="Setor" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="salario">Salário:</label>
+                        <input type="number" id="salario" name="salario" placeholder="Salário" >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="E-mail" >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="number" id="telefone" name="telefone" placeholder="Telefone" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="dataNascimento">Data de Nascimento:</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento" placeholder="Data de Nascimento" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep" placeholder="CEP" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Cidade" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco" placeholder="Endereço" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="completamento">Completamento:</label>
+                        <input type="text" id="completamento" name="completamento" placeholder="Completamento" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="rg">RG:</label>
+                        <input type="text" id="rg" name="rg" placeholder="RG" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="emissaoRG">Emissão RG:</label>
+                        <input type="date" id="emissaoRG" name="emissaoRG" placeholder="Emissão RG" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="CPF" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="cnh">CNH:</label>
+                        <input type="text" id="cnh" name="cnh" placeholder="CNH" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="categoriaCNH">Categoria CNH:</label>
+                        <input type="text" id="categoriaCNH" name="categoriaCNH" placeholder="Categoria CNH" >
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="filial">Filial:</label>
+                        <input type="text" id="filial" name="filial" placeholder="Filial" >
+                    </div>
+                    
+                </div>
+                <button id="submitButton" onclick="addDados()" type="submit">Cadastrar</button>
+            </form>
+
+            <div id="inputDados">
+                <div class="table-responsive">
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th colspan="3" class="menuStatus">Status</th>
+                                <th class="menuId">Id</th>
+                                <th class="menuAdimissao">Adimissão</th>
+                                <th class="menuNome">Nome</th>
+                                <th class="menuCargo">Cargo</th>
+                                <th class="menuSetor">Setor</th>
+                                <th class="menuTelefone">Telefone</th>
+                                <th class="menuNascimento">Data de Nascimento</th>
+                                <th class="menuCEP">CEP</th>
+                                <th class="menuCidade">Cidade</th>
+                                <th class="menuEndereco">Endereço</th>
+                                <th class="menuCompletamento">Completamento</th>
+                                <th class="menuRG">RG</th>
+                                <th class="menuEmissaoRG">Emissão RG</th>
+                                <th class="menuCPF">CPF</th>
+                                <th class="menuCNH">CNH</th>
+                                <th class="menuCategoriaCNH">Categoria CNH</th>
+                                <th class="menuFilial">Filial</th>
+                                <th class="menuSalario">Salário</th>
+                                <th class="menuDemissao">Demissão</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="dadosTable">
+                                <td class="dadosExcluir">Excluir</td>
+                                <td class="dadosEditar">Editar</td>
+                                <td class="dadosSalvar">Salvar</td>
+                                <td class="dadosId">1</td>
+                                <td class="dadosAdimissao">17-08-2023</td>
+                                <td class="dadosName">José Erisvaldo dos Santos</td>
+                                <td class="dadosCargo">Desenvolvedor JR</td>
+                                <td class="dadosSetor">Fulfillment</td>
+                                <td class="dadosTelefone">1234567890</td>
+                                <td class="dadosNascimento">04-06-1998</td>
+                                <td class="dadosCEP">12345-678</td>
+                                <td class="dadosCidade">São Paulo</td>
+                                <td class="dadosEndereco">Rua Mario Betti, 90</td>
+                                <td class="dadosCompletamento">Chacarra</td>
+                                <td class="dadosRG">123456789</td>
+                                <td class="dadosEmissaoRG">2022-01-01</td>
+                                <td class="dadosCPF">987654321</td>
+                                <td class="dadosCNH">123456789</td>
+                                <td class="dadosCategoriaCNH">A,B</td>
+                                <td class="dadosFilial">560</td>
+                                <td class="dadosSalario">5000</td>
+                                <td class="dadosDemissao"></td>
+                            </tr>
+                            <tr class="dadosTable">
+                                <td class="dadosExcluir">Excluir</td>
+                                <td class="dadosEditar">Editar</td>
+                                <td class="dadosSalvar">Salvar</td>
+                                <td class="dadosId">2</td>
+                                <td class="dadosAdimissao">20-08-2023</td>
+                                <td class="dadosName">Maria Silva</td>
+                                <td class="dadosCargo">Analista de Marketing</td>
+                                <td class="dadosSetor">Marketing</td>
+                                <td class="dadosTelefone">9876543210</td>
+                                <td class="dadosNascimento">15-03-1990</td>
+                                <td class="dadosCEP">54321-987</td>
+                                <td class="dadosCidade">Rio de Janeiro</td>
+                                <td class="dadosEndereco">Avenida Copacabana, 123</td>
+                                <td class="dadosCompletamento">Ap. 456</td>
+                                <td class="dadosRG">987654321</td>
+                                <td class="dadosEmissaoRG">2021-02-15</td>
+                                <td class="dadosCPF">123456789</td>
+                                <td class="dadosCNH">987654321</td>
+                                <td class="dadosCategoriaCNH">B</td>
+                                <td class="dadosFilial">710</td>
+                                <td class="dadosSalario">7000</td>
+                                <td class="dadosDemissao"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="rodaPe">
+            <p>&copy; 2023 Painel de Gerenciamento</p>
+        </div>
+    </div>    
+    <script src="cadFuncionarios.js"></script>
+</body>
+</html>
